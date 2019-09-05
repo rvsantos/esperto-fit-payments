@@ -1,0 +1,13 @@
+<h1>Formulario de Matricula</h1>
+
+<%= form_for @registration do |f| %>
+  <%= f.label :name, 'Nome' %>
+  <%= f.text_field :name %>
+  <%= f.label :email, 'Email' %>
+  <%= f.email_field :email %>
+  <%= f.label :unity_id, 'Unidade' %>
+  <%= f.collection_select(:unity_id, @unity, :id, :name) %>
+  <%= f.label :plan_id, 'Plano' %>
+  <%= f.collection_select(:plan_id, @plan, :id, :name) %>
+  <%= f.submit 'Enviar' %>
+<% end %>

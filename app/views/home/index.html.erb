@@ -1,0 +1,8 @@
+<h1>Sistema do Administrados</h1>
+
+<h4>Matriculados</h4>
+<% @registrations.each do |registration| %>
+  <%= link_to registration.name, registration %> <br>
+<% end %>
+
+<%= link_to 'New registrations', new_registration_path %>
