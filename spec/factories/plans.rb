@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :plan do
-    name { "MyString" }
-    value { 1.5 }
+    name { 'Master' }
+    value { 75.00 }
   end
 end

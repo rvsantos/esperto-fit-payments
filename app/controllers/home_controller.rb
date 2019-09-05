@@ -1,8 +1,14 @@
 class HomeController < ApplicationController
   before_action :authenticate_user!
+  before_action :auth_admin
 
   def index
-    redirect_to new_user_session_path unless current_user.admin?
     @registrations = Registration.all
+  end
+
+  private
+
+  def auth_admin
+    redirect_to new_user_session_path unless current_user.admin?
   end
 end

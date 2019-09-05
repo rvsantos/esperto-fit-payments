@@ -2,3 +2,7 @@
 <p><%= @registration.email %></p>
 <p><%= @registration.unity.name %></p>
 <p><%= @registration.plan.name %></p>
+<h2>Mensalidades</h2>
+<% @registration.payments.each do |payment| %>
+  <p><%= payment.value %> - <%= payment.due_date %></p>
+<% end %>

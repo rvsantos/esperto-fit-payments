@@ -5,6 +5,8 @@
   <%= f.text_field :name %>
   <%= f.label :email, 'Email' %>
   <%= f.email_field :email %>
+  <%= f.label :cpf, 'CPF' %>
+  <%= f.text_field :cpf %>
   <%= f.label :unity_id, 'Unidade' %>
   <%= f.collection_select(:unity_id, @unity, :id, :name) %>
   <%= f.label :plan_id, 'Plano' %>
